@@ -1,9 +1,10 @@
 package stepImplementations;
 
+import com.kttechtest.utilities.DriverFactory;
 import org.openqa.selenium.WebDriver;
 
-import com.udemy.pages.DashboardPageFactory;
-import com.udemy.pages.LoginPageFactory;
+import com.kttechtest.pages.DashboardPageFactory;
+import com.kttechtest.pages.LoginPageFactory;
 
 import cucumber.api.java.After;
 import cucumber.api.java.en.And;
@@ -17,7 +18,7 @@ public class BDDLoginTest {
 
 	@Given("^user is on the login page$")
 	public void user_is_on_the_login_page() {
-		driver = com.udemy.utilities.DriverFactory.open("chrome");
+		driver = DriverFactory.open("chrome");
 		driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
 	}
 	
